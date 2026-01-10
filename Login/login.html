@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login da OFF-LC</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+    <div class="auth-container">
+
+    </div>
+
+    <h1>OFF-LC</h1>
+    <p>acesse sua conta</p>
+
+    <form id ="login-form">
+        <h2>Login</h2>
+
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email"
+        placeholder="Digite seu Email"
+        required>
+
+        <label for="login-senha">Senha</label>
+        <input type="password" id="login-senha"
+        placeholder="Digite sua Senha"
+        required>
+
+        <button type="submit">Entrar</button>
+
+        <p id="login-message"></p>
+    </form>
+
+    
+    <form id="register-form">
+        <h2>Crie sua conta</h2>
+    </form>
+
+    <label for="register-email">Email</label>
+    <input type="email"
+    id="register-email"
+    placeholder="Digite seu Email"
+    required>
+
+    <label for="register-password">Senha</label>
+    <input type="password"
+    id="register-password"
+    placeholder="Digite sua Senha"
+    required>
+
+
+    <label for="register-confirm">Confirmar Senha</label>
+    <input type="password"
+    id="register-confirm"
+    placeholder="Confirme sua Senha"
+    required>
+
+    <button type="submit">Cadastrar</button>
+
+    <p id="register-message"></p>
+    </form>
+
+
+    <div class="toggle-auth">
+    <p>
+        Já tem conta?
+        <span id="show-login">Entrar</span>
+    </p>
+
+    <p>
+        Não tem conta?
+        <span id="show-register">Cadastrar</span>
+    </p>
+</div>
+
+
+
+    <script src="login.js"></script>
+</body>
+</html>
