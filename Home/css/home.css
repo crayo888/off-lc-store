@@ -1,11 +1,18 @@
-body {
-    background-color: #0e0e0e;
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
 }
 
+body {
+    width: 100%;
+    overflow-x: hidden; 
+    background: #0e0e0e;/* Evita que a barra preta crie rolagem lateral */
+}
 
 .cabeçalho {   
     background-color: gray;
-    padding: 20px;   
+    padding: 30px;   
     text-align: center;   
     font-size: 24px;   
     font-weight: bold;   
@@ -13,12 +20,8 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    width: 100%;
     
-
-}
-
-.logo {
-    margin-right: 300px;
     
 }
 
@@ -50,39 +53,51 @@ body {
 /* Configuração Geral do Cabeçalho */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
-    height: 80px;
-    background-color: #1a1a1a; /* Fundo escuro elegante */
-    color: white;
-    font-family: Arial, sans-serif;
+    justify-content: space-between; /* Distribui os 3 blocos */
+    background-color: #1a1a1a;
+    width: 100vw;
+    height: 70px;
+    padding: 0 20px;
+    margin: 0;
 }
 
-/* Divisões do Header para manter o equilíbrio */
-.header-left, .header-right {
-    flex: 1; /* Ocupam espaços iguais nas pontas */
+/* A MÁGICA: Define que os lados cresçam igualmente */
+.header-section {
     display: flex;
     align-items: center;
+    flex: 1; /* Faz esquerda e direita ocuparem o mesmo espaço */
 }
 
-.header-right {
-    justify-content: flex-end; /* Alinha o login à direita */
-    gap: 20px;
+.header-section.left {
+    justify-content: flex-start;
+    gap: 15px;
 }
 
-.header-center {
-    flex: 0; /* O logo ocupa apenas o espaço necessário no centro */
+.header-section.center {
+    justify-content: center;
+    flex: 0; /* O logo não precisa crescer, ele apenas fica no meio */
 }
 
-/* Estilo do Logo */
+.header-section.right {
+    justify-content: flex-end; /* Tudo para a ponta direita */
+    gap: 15px;
+}
+
 .logo {
-    font-family: 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: bold;
-    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Isso move o logo exatamente para o meio */
+    text-align: center;
+}
+
+/* Ajuste do Logo */
+.logo a {
+    color: white;
+    text-decoration: none;
     font-size: 24px;
-    letter-spacing: 2px;
+    font-weight: bold;
+    white-space: nowrap; /* Impede o logo de quebrar linha */
 }
 
 /* Barra de Pesquisa Expansível */
@@ -95,6 +110,7 @@ body {
     transition: 0.4s;
     width: 40px; /* Tamanho inicial fechado */
     overflow: hidden;
+    margin-left: 35px;
 }
 
 .search-box.active {
@@ -107,7 +123,6 @@ body {
     background: none;
     outline: none;
     padding: 0;
-    color: #000;
     font-size: 14px;
     transition: 0.4s;
     width: 0;
@@ -147,13 +162,10 @@ body {
 .btn-signup {
     background-color: white;
     color: black;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-weight: bold;
+   padding: 8px 16px;
     cursor: pointer;
+    white-space: nowrap;
 }
-
 
 /* Menu de Categorias */
 .categories-nav {
@@ -204,13 +216,7 @@ body {
     background-color: #0e0e0e;
 }
 
-.logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.6rem;
-    letter-spacing: 3px;
-    font-weight: bold;
-}
+
 
 .main-nav a {
     color: white;
@@ -223,3 +229,80 @@ body {
 .main-nav a:hover {
     opacity: 0.6;
 }
+
+.main-nav {
+    display: none; /* Esconde por padrão */
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.main-nav.active {
+    display: flex;
+}
+
+.menu-usuario {
+    position: relative; /* Mantém o menu preso ao ícone */
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.user-icon-img {
+width: 30px; 
+    height: auto;
+
+}
+
+.user-dropdown {
+    display: none; /* Escondido por padrão */
+    position: absolute;
+    top: 40px;     /* Distância abaixo do ícone */
+    right: 0;      /* Alinha à direita */
+    background-color: #1a1a1a;
+    padding: 10px 15px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+    white-space: nowrap; /* Impede o texto de quebrar linha */
+    z-index: 1000;
+}
+
+/* Quando o JS ativa a classe 'active' */
+.user-dropdown.active {
+    display: block;
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.login-link:hover {
+    color: #ccc; /* Muda de cor levemente ao passar o mouse */
+}
+
+.menu-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-icon-img {
+    width: 30px; /* Tamanho que você já estava usando */
+    height: auto;
+    transition: transform 0.2s; /* Efeito suave ao passar o mouse */
+}
+
+.user-icon-img:hover {
+    transform: scale(1.1); /* O ícone aumenta levemente no hover */
+    filter: brightness(0.8); /* Fica levemente mais escuro ao tocar */
+}
+
+

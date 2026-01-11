@@ -23,12 +23,11 @@ canvas {
     position: relative;
     z-index: 1; /* acima do canvas */
     height: 100vh;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    text-align: center;
     color: white;
     text-align: center;
 }
