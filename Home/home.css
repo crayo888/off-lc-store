@@ -1,0 +1,225 @@
+body {
+    background-color: #0e0e0e;
+}
+
+
+.cabeçalho {   
+    background-color: gray;
+    padding: 20px;   
+    text-align: center;   
+    font-size: 24px;   
+    font-weight: bold;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+
+}
+
+.logo {
+    margin-right: 300px;
+    
+}
+
+.pesquisa {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    
+    
+}
+
+.pesquisa-icon {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 100px;
+    
+    
+}
+
+.spacer {
+   
+}
+
+
+
+/* Configuração Geral do Cabeçalho */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 80px;
+    background-color: #1a1a1a; /* Fundo escuro elegante */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Divisões do Header para manter o equilíbrio */
+.header-left, .header-right {
+    flex: 1; /* Ocupam espaços iguais nas pontas */
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    justify-content: flex-end; /* Alinha o login à direita */
+    gap: 20px;
+}
+
+.header-center {
+    flex: 0; /* O logo ocupa apenas o espaço necessário no centro */
+}
+
+/* Estilo do Logo */
+.logo {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* Barra de Pesquisa Expansível */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #333;
+    border-radius: 40px;
+    padding: 5px;
+    transition: 0.4s;
+    width: 40px; /* Tamanho inicial fechado */
+    overflow: hidden;
+}
+
+.search-box.active {
+    width: 250px; /* Largura aberta */
+    background: #fff;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #000;
+    font-size: 14px;
+    transition: 0.4s;
+    width: 0;
+}
+
+.search-box.active .search-txt {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lupa-icon {
+    width: 20px; /* Diminuindo o tamanho da imagem da lupa */
+    height: 20px;
+}
+
+/* Links de Login */
+.login-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-link:hover {
+    color: #ccc;
+}
+
+.btn-signup {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Menu de Categorias */
+.categories-nav {
+    margin-left: 200px;
+    flex-direction: column;
+    background-color: #f8f8f8; /* Fundo levemente cinza para destacar do header */
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.categories-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaço entre os links */
+    margin: 0;
+    padding: 0;
+}
+
+.categories-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.categories-nav ul li a:hover {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* Estilo especial para o link de Ofertas */
+.categories-nav ul li a.highlight {
+    color: #e84118; /* Vermelho para chamar atenção */
+    font-weight: bold;
+}
+
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    background-color: #0e0e0e;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.main-nav a:hover {
+    opacity: 0.6;
+}
