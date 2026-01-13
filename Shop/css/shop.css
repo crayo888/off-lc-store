@@ -126,3 +126,13 @@ footer {
     font-size: 0.8rem;
     color: white;
 }
+
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-link:hover {
+    text-decoration: underline;
+ }
