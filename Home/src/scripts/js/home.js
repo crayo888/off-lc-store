@@ -20,14 +20,28 @@ function toggleUserMenu() {
 
 function toggleSearch() {
     const searchBox = document.getElementById('searchBox');
-    const searchInput = document.getElementById('searchInput');
+    const overlay = document.getElementById('overlay');
     
-    // Liga/Desliga a classe active
+    // Toggle adiciona a classe se não tiver, e remove se tiver
     searchBox.classList.toggle('active');
-    
-    // Se a caixa abrir, coloca o teclado direto no campo
-    if (searchBox.classList.contains('active')) {
-        searchInput.focus();
-    }
+    overlay.classList.toggle('active');
+}
+
+
+function toggleMenu() {
+    document.getElementById('mainNav').classList.toggle('active');
+    document.getElementById('overlay').classList.toggle('active');
+}
+
+function toggleSearch() {
+    document.getElementById('searchBox').classList.toggle('active');
+    document.getElementById('overlay').classList.toggle('active');
+}
+
+// Função para fechar tudo ao clicar no fundo escuro
+function closeAll() {
+    document.getElementById('sideMenu').classList.remove('active');
+    document.getElementById('searchBox').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
 }
 
