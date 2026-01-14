@@ -12,6 +12,12 @@ body {
     gap: 10px;
 }
 
+@media (max-width: 768px) {
+    .product-page {
+        grid-template-columns: 1fr;
+        margin: 40px 20px;
+}}
+
 .product-gallery img {
     width: 100%;
     border-radius: 10px;
@@ -20,10 +26,10 @@ body {
 .product-info h1 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #d10000;
 }
 
 .price {
-    color: #d10000;
     font-size: 1.4rem;
     margin-bottom: 20px;
 }
@@ -35,6 +41,14 @@ body {
     padding: 8px 14px;
     margin-right: 10px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.sizes button.active {
+    border-color: #d10000;
+    background-color: #d10000;
+    color: white;
 }
 
 
@@ -47,11 +61,13 @@ body {
     background:#d10000;
     color: white;
     border: none;
-    padding: 14px;
+    padding: 16px 28px;
     width: 100%;
     font-size: 1rem;
-    margin: 30px 0;
+    margin: 20px 10px 20px 0px;
     cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
 }
 
 
@@ -71,7 +87,7 @@ body {
 }
 
 
-.recommended h2 {
+.recommend h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 40px;
@@ -79,10 +95,69 @@ body {
 }
 
 
-.recommended-grid {
+.recommend-grid {
     display: grid;
     grid-template-columns: repeat(auto fit, minmax (220px, 1fr));
     gap: 30px;
 }
 
+
+.recommend-grid article {
+    background-color: #141414;
+    padding: 2px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+
+.recommend-grid article:hover {
+    transform: translateY(-4px);
+}
+
+
+.recommend-grid img {
+    width: 25%;
+    max-height: 220px;
+    max-width: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+
+.recommend-grid h3 {
+    font-size: 0.9rem;
+    color: #d10000;
+    margin-bottom: 12px;
+}
+
+
+.recommend-grid p {
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+
+.recommend-grid button {
+    background-color: #d10000;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.recommend-grid button:hover {
+    background-color: #960000;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.8rem;
+    color: white;
+}
 
