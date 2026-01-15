@@ -5,10 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop OFF-LC</title>
+    <link rel="stylesheet" href="/Home/css/home.css">
     <link rel="stylesheet" href="/Shop/css/shop.css">
 </head>
-
 <body>
+<header class="navbar">
+        <div class="header-section left">
+            <div class="menu-container">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <img src="/img.icon/icons8-menu-48.png" alt="Menu" class="hamburguer">
+                </div>
+                <nav class="main-nav" id="mainNav">
+                <button class="close-btn" onclick="toggleMenu()">&times;</button>
+                <div class="side-menu-links">
+                    <a href="/Home/home.html">Home</a>
+                    <a href="/Shop/shop.html">Shop</a>
+                    <a href="/Login/login.html">Login</a> 
+                    <a href="/About/about.html">Sobre</a>
+                </div>
+                </nav>
+            </div>
+            
+            <button class="search-btn-trigger" onclick="toggleSearch()" style="background:none; border:none; cursor:pointer; color:white; font-size:20px; ">
+                <img src="/img.icon/lupa.png" alt="Lupa" class="lupa-icon">
+            </button>
+        </div>
+
+        <div class="header-section center">
+            <div class="logo">
+                <a href="/Home/home.html">OFF-LC</a>
+            </div>
+        </div>
+
+        <div class="header-section right">
+            <a href="/Login/login.html" class="user-link">
+                <img src="/img.icon/icons8-usuário-48.png" class="user-icon-img">
+            </a>
+        </div>
+    </header>
+
+    <div class="search-box" id="searchBox">
+        <button class="close-btn" onclick="toggleSearch()">&times;</button>
+        <div class="search-content">
+            <input type="text" class="search-txt" id="searchInput" placeholder="O QUE VOCÊ ESTÁ BUSCANDO?">
+            <button class="search-btn">
+                <img src="/img.icon/icons8-menu-48.png" alt="" class="lupa-icon">
+            </button>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay" onclick="closeAll()"></div>
+
+
+
+
     <section>
         <h1>Welcome to the OFF-LC Shop</h1>
         <p>Peças Limitadas</p>
@@ -25,7 +75,7 @@
                 <img src="/img.icon/basic_OFF-LC.png" alt="Camisa Preta OFF-LC Básica.PNG">
                 <h3>Camisa Preta OFF-LC Oversized Básica Limitada</h3>
                 <p>R$ 129,90</p>
-                <button><a href="/Shop/produtos/Camisa Preta OFF-LC Oversized Básica Limitada.html" class="product-link">Comprar</a></button>
+                <a href="/Shop/produtos/Camisa Preta OFF-LC Oversized Básica Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -33,7 +83,7 @@
                 <img src="/img.icon/moletom_OFF-LC.jpg" alt="Moletom OFF-LC Preto">
                 <h3>Moletom OFF-LC Preto Oversized Básico Edição Limitada</h3>
                 <p>R$ 299,90</p>
-                <button>Comprar</button>
+                <a href="/Shop/produtos/Moletom OFF-LC Preto Oversized Básico Edição Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -41,7 +91,7 @@
                 <img src="/img.icon/tenis_OFF-LC.jpg" alt="Tênis OFF-LC Preto">
                 <h3>Tênis OFF-LC Preto Edição Limitada</h3>
                 <p>R$ 499,90</p>
-                <button>Comprar</button>
+                <a href="/Shop/produtos/Tênis OFF-LC Preto Edição Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -49,7 +99,7 @@
                 <img src="/img.icon/bone_OFF-LC.jpg" alt="Boné OFF-LC Preto">
                 <h3>Boné OFF-LC Preto Edição Limitada</h3>
                 <p>R$ 89,90</p>
-                <button>Comprar</button>
+                <a href="/Shop/produtos/Boné OFF-LC Preto Edição Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -57,7 +107,7 @@
                 <img src="/img.icon/jaqueta_OFF-LC.jpg" alt="Jaqueta OFF-LC Preta">
                 <h3>Jaqueta OFF-LC Preta Edição Limitada</h3>
                 <p>R$ 599,90</p>
-                <button>Comprar</button>
+                <a href="/Shop/produtos/Jaqueta OFF-LC Preta Edição Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -65,7 +115,7 @@
                 <img src="/img.icon/calça baggy OFF-LC preta jeans.jpg" alt="Calça OFF-LC Preto">
                 <h3>Calça Baggy OFF-LC Preto Edição Limitada</h3>
                 <p>R$ 249,90</p>
-                <button>Comprar</button>
+                <a href="/Shop/produtos/Calça Baggy OFF-LC Preto Edição Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -74,7 +124,7 @@
                 <img src="/img.icon/Camisa OFF-LC Branca Bege.png" alt="Camisa OFF-LC Branca Bege">
                 <h3>Camisa OFF-LC Branca Bege Edição Limitada</h3>
                 <p>R$ 129,90</p>
-                <button>Comprar</button>
+                <a href="/Shop/produtos/Camisa OFF-LC Branca Bege Edição Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -82,7 +132,7 @@
                 <img src="/img.icon/moletom OFF-LC Branco Bege.jpg" alt="Moletom OFF-LC Branco Bege">
                 <h3>Moletom OFF-LC Branco Bege Edição Limitada</h3>
                 <p>R$ 299,90</p>
-                <button>Comprar</button>
+                <a href="/Shop/produtos/Moletom OFF-LC Branco Bege Edição Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -90,7 +140,7 @@
                 <img src="/img.icon/jorts jeans blue OFF-LC.jpg" alt="Jorts OFF-LC Jeans Blue">
                 <h3>Jorts Jeans Blue OFF-LC Edição Limitada</h3>
                 <p>R$ 199,90</p>
-                <button>Comprar</button>
+                <a href="/Shop/produtos/Jorts Jeans Blue OFF-LC Edição Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -98,7 +148,7 @@
                 <img src="/img.icon/pulseira ICE perolada OFF-LC.jpg" alt="Pulseira OFF-LC Perolada">
                 <h3>Pulseira OFF-LC Perolada Edição Limitada</h3>
                 <p>R$ 149,90</p>
-                <button>Comprar</button>
+                <a href="/Shop/produtos/Pulseira OFF-LC Perolada Edição Limitada.html" class="product-link">Comprar</a>
             </article>
 
 
@@ -110,8 +160,8 @@
         <p>© 2026 OFF-LC</p>
     </footer>
 
+    <script src="/Home/src/scripts/js/home.js"></script>
     <script src="/Shop/js/shop.js"></script>
 
 </body>
-
 </html>

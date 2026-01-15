@@ -29,6 +29,12 @@ body {
     color: #d10000;
 }
 
+
+.product-info p {
+    margin: 20px 10px 20px 0px;
+}
+
+
 .price {
     font-size: 1.4rem;
     margin-bottom: 20px;
@@ -104,7 +110,7 @@ body {
 
 .recommend-grid article {
     background-color: #141414;
-    padding: 2px;
+    padding: 20px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s;
@@ -140,18 +146,20 @@ body {
 }
 
 
-.recommend-grid button {
+.recommend-grid a {
     background-color: #d10000;
     color: white;
     border: none;
     padding: 10px 18px;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 
-.recommend-grid button:hover {
+.recommend-grid a:hover {
     background-color: #960000;
+    transition: 0.5s;
 }
 
 footer {

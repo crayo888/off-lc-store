@@ -89,22 +89,6 @@ article p {
     color: white;
 }
 
-article button {
-    background-color: #d10000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.5s; 
-}
-
-
-
-article button:hover {
-    background-color: #960000;
-}
-
 
 .countdown {
     text-align: center;
@@ -135,10 +119,16 @@ footer {
 
 
 .product-link {
+    background-color: #d10000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s;
     text-decoration: none;
-    color: inherit;
 }
 
 .product-link:hover {
-    text-decoration: underline;
+    background-color: #960000;
  }
