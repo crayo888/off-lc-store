@@ -40,7 +40,7 @@ function toggleSearch() {
 
 // Função para fechar tudo ao clicar no fundo escuro
 function closeAll() {
-    document.getElementById('sideMenu').classList.remove('active');
+    document.getElementById('mainNav').classList.remove('active');
     document.getElementById('searchBox').classList.remove('active');
     document.getElementById('overlay').classList.remove('active');
 }

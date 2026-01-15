@@ -10,6 +10,25 @@ body {
     background: #0e0e0e;/* Evita que a barra preta crie rolagem lateral */
 }
 
+/* Para a Logo (OFF-LC) */
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; /* Extra Bold para destacar como na imagem */
+    letter-spacing: 2px; /* Espaço entre as letras para dar um ar premium */
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Para os links do Menu Lateral e Pesquisa */
+.side-menu-links a, .search-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular para os itens do menu */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .cabeçalho {   
     background-color: gray;
     padding: 30px;   
@@ -311,6 +330,31 @@ background: none;
 width: 30px; 
     height: auto;
 
+}
+
+.hamburguer{
+    width: 25px; 
+    height: auto;
+}
+
+.hamburguer:hover {
+    filter: brightness(0.8); /* Fica levemente mais escuro ao tocar */
+    
+}
+
+.hamburguer a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.menu-icon {
+    cursor: pointer; /* Faz a "mãozinha" aparecer */
+    transition: opacity 0.3s; /* Opcional: suaviza efeitos de hover */
+}
+
+.menu-icon:hover {
+    opacity: 0.7; /* Opcional: dá um feedback visual de que é clicável */
 }
 
 .user-dropdown {

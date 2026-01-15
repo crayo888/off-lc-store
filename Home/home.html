@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/Home/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 </head> 
 <body>
     <header class="navbar">
         <div class="header-section left">
             <div class="menu-container">
                 <div class="menu-icon" onclick="toggleMenu()">
-                    <img src="/img.icon/icons8-menu-48.png" alt="Menu">
+                    <img src="/img.icon/icons8-menu-48.png" alt="Menu" class="hamburguer">
                 </div>
                 <nav class="main-nav" id="mainNav">
                 <button class="close-btn" onclick="toggleMenu()">&times;</button>
@@ -61,7 +62,7 @@
         </div>
     </div>
 
-    <div id="overlay" class="overlay" onclick="toggleSearch()"></div>
+    <div id="overlay" class="overlay" onclick="closeAll()"></div>
 
     <script src="/Home/src/scripts/js/home.js"></script>
 </body>
