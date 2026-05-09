@@ -5,12 +5,28 @@ body {
 }
 
 .product-page {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 80px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
+@media (min-width: 1600px) {
+    .product-page {
+        max-width: 1400px;
+        gap: 40px;
+    }
+
+    .product-info h1 {
+        font-size: 2.5rem;
+    }
+
+    .price {
+        font-size: 1.6rem;
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .product-page {
@@ -21,6 +37,9 @@ body {
 .product-gallery img {
     width: 100%;
     border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
 }
 
 .product-info h1 {
@@ -102,7 +121,6 @@ body {
 
 
 .recommend-grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 

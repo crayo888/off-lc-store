@@ -57,7 +57,9 @@ canvas {
 }
 
 .btn:hover {
-    background: #cccccc; /* cinza */
+    background: #141414; /* cinza */
+    color: white;
+
 }
 
 

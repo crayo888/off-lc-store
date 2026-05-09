@@ -6,6 +6,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@media (min-width: 1600px) {
+    main section {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+    }
+}
+
 @media (max-width: 768px) {
     main section {
         grid-template-columns: 1fr;
@@ -45,7 +52,7 @@ section p{
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 80px auto;
     padding: 0 20px;
 }
@@ -57,6 +64,8 @@ main section {
 }
 
 article {
+    max-width: 300px;
+    margin: 0 auto;
     background-color: #141414;
     padding: 20px;
     border-radius: 8px;
