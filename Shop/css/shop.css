@@ -60,6 +60,12 @@ main section {
   gap: 40px;
 }
 
+.product-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 article {
   max-width: 300px;
   margin: 0 auto;
