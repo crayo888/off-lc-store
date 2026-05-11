@@ -124,7 +124,6 @@ body {
  position: fixed; /* Fixa na tela, independente do scroll */
     top: 0;
     left: -100%; /* Totalmente escondido à esquerda */
-    width: 380px; /* Largura da barra lateral */
     height: 100vh; /* Altura total da tela */
     background-color: #1a1a1a; /* Cor de fundo escura */
     z-index: 9999; /* Valor alto para ficar na frente de tudo */

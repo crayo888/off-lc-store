@@ -66,6 +66,10 @@ main section {
     display: block;
 }
 
+.product-card:hover article {
+    transform: translateY(-4px);
+}
+
 article {
   max-width: 300px;
   margin: 0 auto;
@@ -76,9 +80,7 @@ article {
   transition: transform 0.3s;
 }
 
-article:hover {
-  transform: translateY(-4px);
-}
+
 
 article img {
   width: 100%;
@@ -126,17 +128,5 @@ footer {
   color: white;
 }
 
-.product-link {
-  background-color: #d10000;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.5s;
-  text-decoration: none;
-}
 
-.product-link:hover {
-  background-color: #960000;
-}
+
