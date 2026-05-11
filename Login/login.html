@@ -1,82 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Login da OFF-LC</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/Home/css/home.css">
 </head>
 <body>
+    <header class="navbar">
+        <div class="header-section left">
+            <div class="menu-container">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <img src="/img.icon/icons8-menu-48.png" alt="Menu" class="hamburguer">
+                </div>
+                <nav class="main-nav" id="mainNav">
+                <button class="close-btn" onclick="toggleMenu()">&times;</button>
+                <div class="side-menu-links">
+                    <a href="/Home/home.html">Home</a>
+                    <a href="/Shop/shop.html">Shop</a>
+                    <a href="/Login/login.html">Login</a> 
+                    <a href="/About/about.html">Sobre</a>
+                </div>
+                </nav>
+            </div>
+            
+            <button class="search-btn-trigger" onclick="toggleSearch()" style="background:none; border:none; cursor:pointer; color:white; font-size:20px; ">
+                <img src="/img.icon/lupa.png" alt="Lupa" class="lupa-icon">
+            </button>
+        </div>
+
+        <div class="header-section center">
+            <div class="logo">
+                <a href="/Home/home.html">OFF-LC</a>
+            </div>
+        </div>
+
+        <div class="header-section right">
+            <a href="/Login/login.html" class="user-link">
+                <img src="/img.icon/icons8-usuário-48.png" class="user-icon-img">
+            </a>
+        </div>
+    </header>
+
     
-    <div class="auth-container">
-
-    </div>
-
-    <h1>OFF-LC</h1>
-    <p>acesse sua conta</p>
-
-    <form id ="login-form">
-        <h2>Login</h2>
-
-        <label for="login-email">Email</label>
-        <input type="email" id="login-email"
-        placeholder="Digite seu Email"
-        required>
-
-        <label for="login-senha">Senha</label>
-        <input type="password" id="login-senha"
-        placeholder="Digite sua Senha"
-        required>
-
-        <button type="submit">Entrar</button>
-
-        <p id="login-message"></p>
-    </form>
-
     
-    <form id="register-form">
-        <h2>Crie sua conta</h2>
-    </form>
-
-    <label for="register-email">Email</label>
-    <input type="email"
-    id="register-email"
-    placeholder="Digite seu Email"
-    required>
-
-    <label for="register-password">Senha</label>
-    <input type="password"
-    id="register-password"
-    placeholder="Digite sua Senha"
-    required>
-
-
-    <label for="register-confirm">Confirmar Senha</label>
-    <input type="password"
-    id="register-confirm"
-    placeholder="Confirme sua Senha"
-    required>
-
-    <button type="submit">Cadastrar</button>
-
-    <p id="register-message"></p>
-    </form>
-
-
-    <div class="toggle-auth">
-    <p>
-        Já tem conta?
-        <span id="show-login">Entrar</span>
-    </p>
-
-    <p>
-        Não tem conta?
-        <span id="show-register">Cadastrar</span>
-    </p>
 </div>
 
-
-
-    <script src="login.js"></script>
-</body>
-</html>

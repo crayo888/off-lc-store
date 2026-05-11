@@ -61,13 +61,13 @@ main section {
 }
 
 .product-card {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .product-card:hover article {
-    transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 article {
@@ -79,8 +79,6 @@ article {
   text-align: center;
   transition: transform 0.3s;
 }
-
-
 
 article img {
   width: 100%;
@@ -127,6 +125,3 @@ footer {
   font-size: 0.8rem;
   color: white;
 }
-
-
-
